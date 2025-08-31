@@ -21,13 +21,13 @@ const Model =({children , isOpen , title } : Iprops) => {
               transition
               className="w-full max-w-md rounded-xl bg-white border-1 border-red-400 p-5"
             >
-             <div className='mt-5  text-center'>
+             <div className='text-center'>
              <DialogTitle as="h3" className="text-2xl font-medium text-red-500">
                  {title}         
      </DialogTitle>
              </div>
              
-              <div className="mt-4">
+              <div >
                {children}
               </div>
             </DialogPanel>

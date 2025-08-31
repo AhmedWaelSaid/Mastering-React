@@ -19,11 +19,7 @@ const productCard = ({ product }: Iprops) => {
       <h3 className="text-red-500 text-3xl ">{title}</h3>
       <p className="my-4">{txtslice(description)}</p>
 
-      <div className="flex flex-row my-4 items-center space-x-2  ">
-        <span className="w-5 h-5 rounded-full   bg-amber-700 cursor-pointer" />
-        <span className="w-5 h-5 rounded-full   bg-blue-600 cursor-pointer" />
-        <span className="w-5 h-5 rounded-full  bg-cyan-300 cursor-pointer " />
-      </div>
+    
 
       <div className="flex items-center justify-between">
         <span className="text-xl">{price}$</span>
