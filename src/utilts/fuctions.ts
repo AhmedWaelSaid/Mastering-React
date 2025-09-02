@@ -4,3 +4,13 @@
         else
     return txt
 }
+
+
+// onClick={()=>{
+//     if (tempcolor.includes(input)) {
+//       settempcolor(prev => prev.filter(item => item != input))
+//       return
+//     }
+    
+    
+//     settempcolor((prev) =>  [...prev , input])}}

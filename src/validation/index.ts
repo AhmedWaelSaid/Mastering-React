@@ -1,11 +1,13 @@
-  export const vladationobj = (Product : {title: string; description: string;   imageURL: string;  price: string} ) => {
+  export const vladationobj = (Product : {title: string; description: string;   imageURL: string;  price: string , colors: string[]} ) => {
+
     
-    const Errors : {title: string , description: string ,   imageURL: string,  price: string }= 
+    const Errors : {title: string , description: string ,   imageURL: string,  price: string  }= 
     {
         title : "" ,
         description : "" ,
         imageURL: "" ,
-        price: "" 
+        price: "" ,
+        
     }
     const imgurlvladation  = /^(ftp|http|https):\/\/[^ "]+$/.test(Product.imageURL)
 
@@ -30,7 +32,7 @@
     Errors.price = "helloprice"
      
    }
+  
 
-   
     return Errors
 }

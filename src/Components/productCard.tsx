@@ -2,12 +2,21 @@ import type { IProduct } from "../Interfaces";
 import Image from "./Image";
 import Button from "./ui/Button";
 import { txtslice } from "../utilts/fuctions";
+import Circlecolor from "./circlecolor";
 interface Iprops {
   product: IProduct;
 }
 
 const productCard = ({ product }: Iprops) => {
-  const { description, title, price , imageURL} = product;
+  const { description, title, price , imageURL , colors , category} = product;
+
+  const Allcolors = colors.map((input: string) => {
+
+    
+    return <Circlecolor key={input} color={input}  />
+  
+  })
+
   return (
     <div className=" max-w-sm mr-auto ml-auto md:mx-0 md:max-w-lg rounded-md border  border-red-500 p-2 m-3 flex-col ">
       <Image
@@ -24,19 +33,14 @@ const productCard = ({ product }: Iprops) => {
       <div className="flex items-center justify-between">
         <span className="text-xl">{price}$</span>
         <Image
-          imageURL={imageURL}
+          imageURL={category.imageURL}
           alt="productname"
           classname="h-10 w-10 rounded-full"
         />
       </div>
+    <div className="flex flex-wrap space-x-2">  {Allcolors}</div>
       <div className="flex justify-between space-x-2 mt-3">
-        {/* <Button  onClick={() => {
-        alert("hello");
-      }} 
-      width= 'w-full'
-      className="bg-blue-600 p-3  ">
-          sucsess
-        </Button> */}
+        
         <Button className="bg-blue-600 p-3">Edit</Button>
         <Button className="bg-red-400">Delete</Button>
       </div>
