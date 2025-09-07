@@ -26,7 +26,7 @@ const productObj = {
 
 function App() {
   const [Products, setProducts] = useState<IProduct[]>(productList);
-  
+  const [producttoEdit , setproducttoEdit] = useState(productObj)
   const [Product, setProduct] = useState<IProduct>(productObj);
   const [selectedCategory, setSelectedCategory] = useState<ICategory>(categories?.[3] || categories?.[0]);
   const [isOpen, setIsOpen] = useState(false)
@@ -94,8 +94,11 @@ function App() {
   };
   
   
-  const Renderlist = Products.map((product) => (
+  const Renderlist = Products.map((product ,idx) => (
+    <>
+    <h3>{idx}</h3>
     <ProductCard key={product.id} product={product} />
+    </>
   ));
   const RenderInputForm = formInputsList.map(input=> <div className="flex flex-col " key={input.id}>
     <label htmlFor={input.id}>{input.label}</label>

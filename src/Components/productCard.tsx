@@ -7,6 +7,13 @@ interface Iprops {
   product: IProduct;
 }
 
+
+function onclickhandler() {
+  
+  
+}
+
+
 const productCard = ({ product }: Iprops) => {
   const { description, title, price , imageURL , colors , category} = product;
 
@@ -41,7 +48,7 @@ const productCard = ({ product }: Iprops) => {
     <div className="flex flex-wrap space-x-2">  {Allcolors}</div>
       <div className="flex justify-between space-x-2 mt-3">
         
-        <Button className="bg-blue-600 p-3">Edit</Button>
+        <Button className="bg-blue-600 p-3" onClick={onclickhandler}>Edit</Button>
         <Button className="bg-red-400">Delete</Button>
       </div>
     </div>
